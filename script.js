@@ -29,4 +29,28 @@ and return true if they are in love and false if they aren't.
 function lovefunc(flower1, flower2) {
   return (flower1 + flower2) % 2 === 1;
 }
+
 // console.log(lovefunc(1, 1));
+
+// ========================================================================== //
+
+/*
+Build a square
+I will give you an integer. Give me back a shape that is as long and wide 
+as the integer. The integer will be a whole number between 1 and 50.
+Example
+n = 3, so I expect a 3x3 square back just like below as a string:
+*/
+
+function generateShape(integer) {
+  let square = "";
+  for (let i = 0; i < integer; i++) {
+    for (let j = 0; j < integer; j++) {
+      square += "+";
+    }
+    square += "\n";
+  }
+  return square.slice(0, -1);
+}
+
+// console.log(generateShape(8));
