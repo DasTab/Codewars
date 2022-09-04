@@ -9,7 +9,7 @@ Example(Input => Output):
 
 function digitize(n) {
   //code here
-  return n.toString().split('').reverse().map(Number);
+  return n.toString().split("").reverse().map(Number);
 }
 
 // console.log(digitize(32231));
@@ -66,9 +66,8 @@ Example(Input --> Output):
 "battle no requires which that is victory greatest The"
 */
 
-function reverseWords(str){
-
-  return str.split(' ').reverse().join(' ');
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
 }
 
 // console.log(reverseWords('Hello world!'));
@@ -87,14 +86,15 @@ To convert fahrenheit to celsius:
 celsius = (fahrenheit - 32) * (5/9)
 */
 
-function weatherInfo (temp) {
+function weatherInfo(temp) {
   var c = convertToCelsius(temp);
-  return (c > 0) ? (c + " is above freezing temperature") : (c + " is freezing temperature");
-
+  return c > 0
+    ? c + " is above freezing temperature"
+    : c + " is freezing temperature";
 }
 
-function convertToCelsius (temperature) {
-  var celsius = (temperature - 32) * (5/9);
+function convertToCelsius(temperature) {
+  var celsius = (temperature - 32) * (5 / 9);
   return celsius;
 }
 
@@ -109,9 +109,9 @@ Your task is to write function factorial
 */
 function factorial(n) {
   if (n <= 0) {
-      return 1;
+    return 1;
   } else {
-      return n * factorial(n-1);
+    return n * factorial(n - 1);
   }
 }
 
@@ -119,4 +119,19 @@ function factorial(n) {
 
 // ========================================================================== //
 
+/*
+Beginner - Reduce but Grow
+Given a non-empty array of integers, return the result of multiplying the values 
+together in order. 
+Example:
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+*/
+function grow(x) {
+  let sum = 1;
+  for (let n of x) {
+    sum *= n;
+  }
+  return sum;
+}
 
+// console.log(grow([1, 2, 3]));
