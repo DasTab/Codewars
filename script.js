@@ -134,4 +134,18 @@ function grow(x) {
   return sum;
 }
 
-// console.log(grow([1, 2, 3]));
+// ========================================================================== //
+
+/*
+For Twins: 1. Types
+Write a function that will accept two parameters: variable and type and check 
+if type of variable is matching type. Return true if types match or false if not.
+*/
+function typeValidation(variable, type) {
+  return typeof variable  === type;
+}
+
+// console.log(typeValidation(null, 'object'));
+
+// ========================================================================== //
+
