@@ -142,7 +142,7 @@ Write a function that will accept two parameters: variable and type and check
 if type of variable is matching type. Return true if types match or false if not.
 */
 function typeValidation(variable, type) {
-  return typeof variable  === type;
+  return typeof variable === type;
 }
 
 // console.log(typeValidation(null, 'object'));
@@ -161,10 +161,8 @@ squares in just one break, but for size 3 x 1 you must do two breaks.
 If input data is invalid you should return 0 (as in no breaks are needed if we do not 
 have any chocolate to split). Input will always be a non-negative integer.
 */
-function breakChocolate(n,m) {
-  return (n * m) - 1 <= 0 
-  ? 0 
-  : n * m - 1;
+function breakChocolate(n, m) {
+  return n * m - 1 <= 0 ? 0 : n * m - 1;
 }
 
 // console.log(breakChocolate(5, 5));
@@ -180,8 +178,33 @@ Examples
 "www.codewars.com?page=1" -->"www.codewars.com?page=1"
 */
 
-function removeUrlAnchor(url){
-  return url.split('#')[0];
+function removeUrlAnchor(url) {
+  return url.split("#")[0];
 }
 
 // console.log(removeUrlAnchor("www.codewars.com/katas/?page=1#about"));
+
+// ========================================================================== //
+
+/*
+Responsible Drinking!
+Codewars Bar recommends you drink 1 glass of water per standard drink so you're 
+not hungover tomorrow morning.
+Examples
+"1 beer"  -->  "1 glass of water"
+because you drank one standard drink
+
+"1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer"  -->  "10 glasses of water"
+because you drank ten standard drinks
+ */
+const hydrate = (s) => {
+  let count = 0;
+  for (let a of s) {
+    if (a > 0) {
+      count += +a;
+    }
+  }
+  return count === 1 ? `${count} glass of water` : `${count} glasses of water`;
+};
+
+// console.log(hydrate("1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer, 2 shots, 1 glass of wine, 1 beer"));
