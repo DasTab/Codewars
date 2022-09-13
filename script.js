@@ -208,3 +208,18 @@ const hydrate = (s) => {
 };
 
 // console.log(hydrate("1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer, 2 shots, 1 glass of wine, 1 beer"));
+
+// ========================================================================== //
+
+/*
+Simple Fun #176: Reverse Letter
+Given a string str, reverse it and omit all non-alphabetic characters.
+Example
+For str = "krishan", the output should be "nahsirk".
+For str = "ultr53o?n", the output should be "nortlu".
+ */
+function reverseLetter(str) {
+  return str.replace(/[^A-Za-z]/g, "").split("").reverse().join("");
+}
+
+// console.log(reverseLetter("ultr53o?n"));
