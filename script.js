@@ -30,7 +30,7 @@ function lovefunc(flower1, flower2) {
   return (flower1 + flower2) % 2 === 1;
 }
 
-// console.log(lovefunc(1, 1));
+// console.log(lovefunc(3, 2));
 
 // ========================================================================== //
 
@@ -219,7 +219,7 @@ For str = "krishan", the output should be "nahsirk".
 For str = "ultr53o?n", the output should be "nortlu".
  */
 function reverseLetter(str) {
-  return str.replace(/[^A-Za-z]/g, "").split("").reverse();
+  return str.replace(/[^A-Za-z]/g, "").split("").reverse().join('');
 }
 
 // console.log(reverseLetter("ultr53o?n"));
@@ -240,3 +240,24 @@ function vaporcode(string) {
 } 
 
 // console.log(vaporcode("Lets go to the movies"));
+
+// ========================================================================== //
+
+/*
+Highest and Lowest (7)
+In this little assignment you are given a string of space separated numbers, 
+and have to return the highest and lowest number.
+Examples
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+ */
+
+function highAndLow(numbers){
+  numbers = numbers.split(' ');
+  return Math.max(...numbers) + ' ' + Math.min(...numbers);
+}
+
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+
+// ========================================================================== //
